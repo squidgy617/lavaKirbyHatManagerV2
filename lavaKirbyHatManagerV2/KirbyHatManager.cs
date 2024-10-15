@@ -421,8 +421,8 @@ namespace lKHM
 				cmd._targetSectionId = commandIn._targetSection;
 				cmd._moduleID = commandIn._targetModuleID;
 
-				if (sectionIn._manager._commands.ContainsKey(convertedOffset))
-				{
+                if (sectionIn._manager.GetCommand(convertedOffset) != null)
+                {
 					sectionIn._manager.ClearCommand(convertedOffset);
 				}
 
